@@ -1,0 +1,66 @@
+/*****************************************************************
+BASE FONT
+****************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body,
+input,
+select,
+textarea,
+table tbody tr td,
+table thead tr th,
+.bf {font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, 'sans-serif';}
+
+/*****************************************************************
+FONT COLORS
+****************************************************************/
+
+.cw,	.HVcw:hover		{color:#fff;}					/* Main Light */
+body,
+.cm,	.HVcm:hover		{color:#666666;}				/* Main Gray */
+
+.cc1,	.HVcc1:hover,	.FCcc1:focus	{color:#EC8300;}				/* Corporative color 1 */
+.cc1l,	.HVcc1l:hover,	.FCcc1l:focus	{color:#FBCB89;}				/* Corporative Color 1 Light*/
+.cc1xl,	.HVcc1xl:hover,	.FCcc1xl:focus	{color:#F8EAD1;}				/* Corporative Color 1 Extra Light*/
+.cc1d,	.HVcc1d:hover,	.FCcc1d:focus	{color:#EC8300;}				/* Corporative Color 1 Dark*/
+.cc1xd,	.HVcc1xd:hover,	.FCcc1xd:focus	{color:#303030;}				/* Corporative Color 1 Extra Dark*/
+
+.cc2,	.HVcc2:hover,	.FCcc2:focus	{color:#666666;}				/* Corporative color 2 */
+.cc2l,	.HVcc2l:hover,	.FCcc2l:focus	{color:#909aa8;}				/* Corporative Color 2 Light*/
+.cc2xl,	.HVcc2xl:hover,	.FCcc2xl:focus	{color:#d1d9e3;}				/* Corporative Color 2 Extra Light*/
+.cc2d,	.HVcc2d:hover,	.FCcc2d:focus	{color:#283039;}				/* Corporative Color 2 Dark*/
+.cc2xd,	.HVcc2xd:hover,	.FCcc2xd:focus	{color:#303030;}				/* Corporative Color 2 Extra Dark*/
+
+.cc3,	.HVcc3:hover,	.FCcc3:focus	{color:#824900;}				/* Corporative color 3 */
+.cc3l,	.HVcc3l:hover,	.FCcc3l:focus	{color:#C3A686;}				/* Corporative Color 3 Light*/
+.cc3xl,	.HVcc3xl:hover,	.FCcc3xl:focus	{color:#E8DCCE;}				/* Corporative Color 3 Extra Light*/
+.cc3d,	.HVcc3d:hover,	.FCcc3d:focus	{color:#613301;}				/* Corporative Color 3 Dark*/
+.cc3xd,	.HVcc3xd:hover,	.FCcc3xd:focus	{color:#421F01;}				/* Corporative Color 3 Extra Dark*/
+
+
+
+/*****************************************************************
+BACKGROUND COLORS
+****************************************************************/
+
+.bw, 	.HVbw:hover		{background-color:#fff;}		/* Main Light */
+.bm,	.HVbm:hover		{background-color:#666666;}		/* Main Gray */
+
+.bg1,	.HVbg1:hover,	.FCbg1:focus	{background-color:#EC8300;}		/* Corporative color 1 */
+.bg1l,	.HVbg1l:hover,	.FCbg1l:focus	{background-color:#FBCB89;}		/* Corporative Color 1 Light*/
+.bg1xl,	.HVbg1xl:hover,	.FCbg1xl:focus	{background-color:#F8EAD1;}		/* Corporative Color 1 Extra Light*/
+.bg1d,	.HVbg1d:hover,	.FCbg1d:focus	{background-color:#EC8300;}		/* Corporative Color 1 Dark*/
+.bg1xd,	.HVbg1xd:hover,	.FCbg1xd:focus	{background-color:#303030;}		/* Corporative Color 1 Extra Dark*/
+
+.bg2,	.HVbg2:hover,	.FCbg2:focus	{background-color:#666666;}		/* Corporative color 2 */
+.bg2l,	.HVbg2l:hover,	.FCbg2l:focus	{background-color:#909aa8;}		/* Corporative Color 2 Light*/
+.bg2xl,	.HVbg2xl:hover,	.FCbg2xl:focus	{background-color:#d1d9e3;}		/* Corporative Color 2 Extra Light*/
+.bg2d,	.HVbg2d:hover,	.FCbg2d:focus	{background-color:#283039;}		/* Corporative Color 2 Dark*/
+.bg2xd,	.HVbg2xd:hover,	.FCbg2xd:focus	{background-color:#303030;}		/* Corporative Color 2 Extra Dark*/
+
+.bg3,	.HVbg3:hover,	.FCbg3:focus	{background-color:#824900;}		/* Corporative color 3 */
+.bg3l,	.HVbg3l:hover,	.FCbg3l:focus	{background-color:#C3A686;}		/* Corporative Color 3 Light*/
+.bg3xl,	.HVbg3xl:hover,	.FCbg3xl:focus	{background-color:#E8DCCE;}		/* Corporative Color 3 Extra Light*/
+.bg3d,	.HVbg3d:hover,	.FCbg3d:focus	{background-color:#613301;}		/* Corporative Color 3 Dark*/
+.bg3xd,	.HVbg3xd:hover,	.FCbg3xd:focus	{background-color:#421F01;}		/* Corporative Color 3 Extra Dark*/
