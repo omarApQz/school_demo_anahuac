@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.ResponseBody
 @Controller
 class StudentController {
 
-  @RequestMapping("/")
+  @RequestMapping("/student")
   @ResponseBody
-  ModelAndView home() {
+  ModelAndView student() {
 		ModelAndView model = new ModelAndView("index");
-		model.addObject("content", "home");
+		model.addObject("content", "student");
 		model.addObject("title", "Baeldung");
 		model.addObject("any", "Hola mundo");
 		return model
