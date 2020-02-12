@@ -33,10 +33,7 @@
     
     </div>
   </header>
-  <div class="container">
-
-    <div th:replace="@{'views/' + ${content}} :: ${content}"></div>
-  </div>
+  <div th:replace="@{'views/' + ${content}} :: ${content}"></div>
   <div lang="en" th:replace="footer :: footer"> </div>
   <div th:replace="@{'views/' + ${content}} :: js"> </div>
 </body>

@@ -1,7 +1,120 @@
 <div th:fragment="student">
-  <div class="row">
+  <div class="row line_gray">
+    <div class="col-4">
+    </div>
+    <div class="col-6">
+      <h1 class="titles">
+        REGISTRO DE ALUMNO
+      </h1>
+    </div>
+    <div class="line-style"><span></span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row" style="margin-top: 7%;">
+      <div class="col-md-6">
+        <label class="formLabel required" for="regNombre">Primer nombre:</label>
+        <input type="text" class="form-control" id="regNombre" name="regNombre" maxlength="75">
 
+        <label class="formLabel labelMed" for="regSegNombre">Segundo nombre:</label>
+        <input type="text" class="form-control" id="regSegNombre" name="regSegNombre" maxlength="75">
+      </div>
+
+      <div class="col-md-6">
+        <label class="formLabel labelMed required" for="regApePaterno">Apellido paterno:</label>
+        <input type="text" class="form-control" id="regApePaterno" name="regApePaterno" maxlength="75">
+
+        <label class="formLabel labelMed required" for="regApeMaterno">Apellido materno:</label>
+        <input type="text" class="form-control" id="regApeMaterno" name="regApeMaterno" maxlength="75">
+      </div>
+
+      <div class="col-md-6">
+        <label class="formLabel required" for="regCorreo">Correo electrónico:</label>
+        <input type="text" class="form-control" id="regCorreo" name="regCorreo" maxlength="125" autocapitalize="none"
+          autocorrect="off">
+      </div>
+
+      <div class="col-md-6">
+        <label class="formLabel required" for="regCorreoCheck">Confirma tu correo:</label>
+        <input type="text" class="form-control" id="regCorreoCheck" name="regCorreoCheck" maxlength="125"
+          autocapitalize="none" autocorrect="off">
+      </div>
+
+      <div class="col-md-6">
+        <label class="formLabel required" for="regSexo">Sexo:</label>
+        <select id="regSexo" name="regSexo" class="form-control">
+          <option value="">Selecciona...</option>
+          <option value="1">Masculino</option>
+          <option value="2">Femenino</option>
+        </select>
+      </div>
+
+      <div class="col-md-6" style="display: none">
+        <label class="formLabel required" for="regCampusID">Pertenece:</label>
+        <select id="regCampusID" name="regCampusID" class="form-control" readonly="">
+          <option value="4" selected="">4</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label class="formLabel required" for="regleID">Lugar donde realizarás tu examen:</label>
+        <select id="regleID" name="regleID" class="form-control" readonly="">
+          <option value="47" selected="">Anáhuac Mayab Mérida</option>
+        </select>
+        <input type="hidden" name="caam" value="Anáhuac Mayab Mérida">
+        <input type="hidden" name="espa" value="3">
+      </div>
+
+      <div class="col-md-6">
+        <label class="formLabel labelMed required" for="becUniversidad">¿A cúal de las universidades de la Red Anáhuac
+          deseas ingresar?</label>
+        <select id="becUniversidad" name="becUniversidad" class="form-control">
+          <option value="">Elige...</option>
+          <option value="1">Universidad Anáhuac Querétaro</option>
+          <option value="2">Universidad Anáhuac México Campus Norte</option>
+          <option value="3">Universidad Anáhuac México Campus Sur</option>
+          <option value="4">Anáhuac Mayab Mérida</option>
+          <option value="5">Universidad Anáhuac Xalapa</option>
+          <option value="6">Universidad Anáhuac Cancún</option>
+          <option value="7">Universidad Anáhuac Oaxaca</option>
+          <option value="8">Universidad Anáhuac Puebla</option>
+          <option value="9">Instituto de Estudios Superiores de Tamaulipas</option>
+          <option value="10">Pontificio Instituto Juan Pablo II</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="formLabel labelMed required" for="becLicenciatura">Licenciatura que deseas estudiar:</label>
+        <select id="becLicenciatura" name="becLicenciatura" class="form-control">
+          <option value="">Selecciona...</option>
+        </select>
+      </div>
+      <div class="clearfix" style="margin:0 0 15px;"></div>
+      <div class="col-md-6">
+        <input type="checkbox" id="avisoPrivacidad" name="avisoPrivacidad" class="formCheck">
+        <label class="checkLabel required" for="avisoPrivacidad"><span></span>
+          <p>Estoy de acuerdo y he leído el <a href="https://redanahuac.mx/mobile/aviso.html" target="_blank"
+              class="cc1 HVcc1d">Aviso de Privacidad</a>.</p>
+        </label>
+        <div id="avisoPrivacidadError"></div>
+      </div>
+
+      <div class="col-md-6">
+        <input type="checkbox" id="ayudaCarrera" name="ayudaCarrera" class="formCheck">
+        <label class="checkLabel" for="ayudaCarrera"><span></span>
+          <p>Necesito asesoría para terminar de elegir mi carrera.</p>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="background: rgba(236,131,0,0.3);">
+    <div class="col-3">
+
+    </div>
+    <div class="col-6">
+      <input type="submit" value="REGISTRAR" class="formSubmit cw HVcc1xl bg1d HVbg1xd" id="submitForm" name="submitForm">
+     </div>
   </div>
 </div>
+
 <div th:fragment="js">
 </div>
