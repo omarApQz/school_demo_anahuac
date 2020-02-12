@@ -5,6 +5,7 @@ build/
 !**/src/main/**
 !**/src/test/**
 src/main/resources/static/third-party/
+bin/
 
 ### STS ###
 .apt_generated
