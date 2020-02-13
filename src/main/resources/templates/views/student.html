@@ -1,4 +1,4 @@
-<div th:fragment="student">
+<div th:fragment="student" id="app">
   <div class="row line_gray">
     <div class="col-4">
     </div>
@@ -106,15 +106,16 @@
       </div>
     </div>
   </div>
-  <div class="row" style="background: rgba(236,131,0,0.3);">
+  <div class="row" style="background: rgba(236,131,0,0.3); margin-bottom: 50px;">
     <div class="col-3">
 
     </div>
     <div class="col-6">
-      <input type="submit" value="REGISTRAR" class="formSubmit cw HVcc1xl bg1d HVbg1xd" id="submitForm" name="submitForm">
+      <input type="submit" @click="save" value="REGISTRAR" class="formSubmit cw HVcc1xl bg1d HVbg1xd" id="submitForm" name="submitForm">
      </div>
   </div>
 </div>
 
 <div th:fragment="js">
+  <script src="/js/student.js"></script>
 </div>
