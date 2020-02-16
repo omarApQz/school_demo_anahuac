@@ -8,9 +8,15 @@ import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
+import org.springframework.web.bind.annotation.RequestBody
+import com.nahuac.school.domain.Student
+import com.nahuac.school.repository.StudentRepository
 
 @Controller
 class StudentController {
+
+	@Autowired
+	StudentRepository studentRepository
 
   @ResponseBody
 	@RequestMapping("/student")
@@ -22,10 +28,22 @@ class StudentController {
 		return model
   }
 
+  @ResponseBody
+	@RequestMapping("/student/show")
+  ModelAndView show() {
+		ModelAndView model = new ModelAndView("index");
+		model.addObject("content", "show");
+		model.addObject("title", "Baeldung");
+		model.addObject("any", "Hola mundo");
+		model.addObject("students", studentRepository.findAll());
+		return model
+  }
+
 	@PostMapping("/student/save")
   @ResponseBody
-  Map save(Map params) {
+  Map save(@RequestBody Student params) {
 		println params?.dump()
+		studentRepository.save(params)
 		[response: "Save"]
   }
 }

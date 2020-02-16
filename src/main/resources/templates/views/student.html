@@ -1,4 +1,5 @@
 <div th:fragment="student" id="app">
+  <vue-snotify></vue-snotify>
   <div class="row line_gray">
     <div class="col-4">
     </div>
@@ -14,35 +15,35 @@
     <div class="row" style="margin-top: 7%;">
       <div class="col-md-6">
         <label class="formLabel required" for="regNombre">Primer nombre:</label>
-        <input type="text" class="form-control" id="regNombre" name="regNombre" maxlength="75">
+        <input type="text" class="form-control" id="regNombre" name="regNombre" maxlength="75" v-model="student.firstName">
 
         <label class="formLabel labelMed" for="regSegNombre">Segundo nombre:</label>
-        <input type="text" class="form-control" id="regSegNombre" name="regSegNombre" maxlength="75">
+        <input type="text" class="form-control" id="regSegNombre" name="regSegNombre" maxlength="75" v-model="secondName">
       </div>
 
       <div class="col-md-6">
         <label class="formLabel labelMed required" for="regApePaterno">Apellido paterno:</label>
-        <input type="text" class="form-control" id="regApePaterno" name="regApePaterno" maxlength="75">
+        <input type="text" class="form-control" id="regApePaterno" name="regApePaterno" maxlength="75"v-model="student.lastName">
 
         <label class="formLabel labelMed required" for="regApeMaterno">Apellido materno:</label>
-        <input type="text" class="form-control" id="regApeMaterno" name="regApeMaterno" maxlength="75">
+        <input type="text" class="form-control" id="regApeMaterno" name="regApeMaterno" maxlength="75" v-model="mathernName">
       </div>
 
       <div class="col-md-6">
         <label class="formLabel required" for="regCorreo">Correo electrónico:</label>
-        <input type="text" class="form-control" id="regCorreo" name="regCorreo" maxlength="125" autocapitalize="none"
+        <input type="text" class="form-control" id="regCorreo" name="regCorreo" maxlength="125" autocapitalize="none" v-model="student.email"
           autocorrect="off">
       </div>
 
       <div class="col-md-6">
         <label class="formLabel required" for="regCorreoCheck">Confirma tu correo:</label>
-        <input type="text" class="form-control" id="regCorreoCheck" name="regCorreoCheck" maxlength="125"
+        <input type="text" class="form-control" id="regCorreoCheck" name="regCorreoCheck" maxlength="125" 
           autocapitalize="none" autocorrect="off">
       </div>
 
       <div class="col-md-6">
         <label class="formLabel required" for="regSexo">Sexo:</label>
-        <select id="regSexo" name="regSexo" class="form-control">
+        <select id="regSexo" name="regSexo" class="form-control" v-model="student.gender">
           <option value="">Selecciona...</option>
           <option value="1">Masculino</option>
           <option value="2">Femenino</option>
@@ -51,13 +52,13 @@
 
       <div class="col-md-6" style="display: none">
         <label class="formLabel required" for="regCampusID">Pertenece:</label>
-        <select id="regCampusID" name="regCampusID" class="form-control" readonly="">
+        <select id="regCampusID" name="regCampusID" class="form-control" readonly="" >
           <option value="4" selected="">4</option>
         </select>
       </div>
       <div class="col-md-6">
         <label class="formLabel required" for="regleID">Lugar donde realizarás tu examen:</label>
-        <select id="regleID" name="regleID" class="form-control" readonly="">
+        <select id="regleID" name="regleID" class="form-control" readonly="" v-model="student.locationTest">
           <option value="47" selected="">Anáhuac Mayab Mérida</option>
         </select>
         <input type="hidden" name="caam" value="Anáhuac Mayab Mérida">
@@ -67,7 +68,7 @@
       <div class="col-md-6">
         <label class="formLabel labelMed required" for="becUniversidad">¿A cúal de las universidades de la Red Anáhuac
           deseas ingresar?</label>
-        <select id="becUniversidad" name="becUniversidad" class="form-control">
+        <select id="becUniversidad" name="becUniversidad" class="form-control" v-model="student.entitySchool">
           <option value="">Elige...</option>
           <option value="1">Universidad Anáhuac Querétaro</option>
           <option value="2">Universidad Anáhuac México Campus Norte</option>
@@ -84,13 +85,13 @@
 
       <div class="col-md-6">
         <label class="formLabel labelMed required" for="becLicenciatura">Licenciatura que deseas estudiar:</label>
-        <select id="becLicenciatura" name="becLicenciatura" class="form-control">
+        <select id="becLicenciatura" name="becLicenciatura" class="form-control" v-model="student.degree">
           <option value="">Selecciona...</option>
         </select>
       </div>
       <div class="clearfix" style="margin:0 0 15px;"></div>
       <div class="col-md-6">
-        <input type="checkbox" id="avisoPrivacidad" name="avisoPrivacidad" class="formCheck">
+        <input type="checkbox" id="avisoPrivacidad" name="avisoPrivacidad" class="formCheck" v-model="student.advisory">
         <label class="checkLabel required" for="avisoPrivacidad"><span></span>
           <p>Estoy de acuerdo y he leído el <a href="https://redanahuac.mx/mobile/aviso.html" target="_blank"
               class="cc1 HVcc1d">Aviso de Privacidad</a>.</p>
