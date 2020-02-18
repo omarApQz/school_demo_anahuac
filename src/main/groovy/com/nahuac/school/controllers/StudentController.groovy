@@ -36,8 +36,6 @@ class StudentController {
   ModelAndView show() {
 		ModelAndView model = new ModelAndView("index");
 		model.addObject("content", "show");
-		model.addObject("title", "Baeldung");
-		model.addObject("any", "Hola mundo");
 		model.addObject("students", studentRepository.findAll());
 		return model
   }
@@ -47,7 +45,7 @@ class StudentController {
   Map save(@RequestBody Student params) {
 		println params?.dump()
 		studentRepository.save(params)
-		notificationComponent.sendNotification("Any")
+		notificationComponent.sendNotification(params.email)
 		[response: "Save"]
   }
 }
