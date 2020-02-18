@@ -17,11 +17,14 @@ class NotificationComponent {
   private JavaMailSender javaMailSender;
 
   def sendNotification(String username){
-    logger.info "Send Email Notification"
+    logger.info "Sending Email Notification"
     SimpleMailMessage msg = new SimpleMailMessage();
-    msg.setTo("brandon@makingdevs.com")
+    msg.setFrom("brandon@makingdevs.com")
+    msg.setTo("leovergara.dark@gmail.com")
     msg.setSubject("Testing from Spring Boot")
     msg.setText("Hello World \n Spring Boot Email")
-    javaMailSender.send(msg)
+    def response = javaMailSender.send(msg)
+    println response
+    logger.info "Sent Email Notification"
   }
 }
