@@ -20,11 +20,10 @@ class NotificationComponent {
     logger.info "Sending Email Notification"
     SimpleMailMessage msg = new SimpleMailMessage();
     msg.setFrom("brandon@makingdevs.com")
-    msg.setTo("leovergara.dark@gmail.com")
-    msg.setSubject("Testing from Spring Boot")
-    msg.setText("Hello World \n Spring Boot Email")
-    def response = javaMailSender.send(msg)
-    println response
+    msg.setTo(username)
+    msg.setSubject("Binvenido a la aplicación")
+    msg.setText("Hola muchas gracias por hacer el registro con nosotros\n Saludos")
+    javaMailSender.send(msg)
     logger.info "Sent Email Notification"
   }
 }
