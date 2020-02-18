@@ -11,12 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RequestBody
 import com.nahuac.school.domain.Student
 import com.nahuac.school.repository.StudentRepository
+import com.nahuac.school.component.NotificationComponent
 
 @Controller
 class StudentController {
 
 	@Autowired
 	StudentRepository studentRepository
+	@Autowired
+	NotificationComponent notificationComponent
 
   @ResponseBody
 	@RequestMapping("/student")
@@ -44,6 +47,7 @@ class StudentController {
   Map save(@RequestBody Student params) {
 		println params?.dump()
 		studentRepository.save(params)
+		notificationComponent.sendNotification("Any")
 		[response: "Save"]
   }
 }
