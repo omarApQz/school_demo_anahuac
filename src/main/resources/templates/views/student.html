@@ -87,9 +87,11 @@
         <label class="formLabel labelMed required" for="becLicenciatura">Licenciatura que deseas estudiar:</label>
         <select id="becLicenciatura" name="becLicenciatura" class="form-control" v-model="student.degree">
           <option value="">Selecciona...</option>
+          <option value="Economía">Economía</option>
+          <option value="Derecho">Derecho</option>
         </select>
       </div>
-      <div class="clearfix" style="margin:0 0 15px;"></div>
+      <div class="clearfix" style="margin:0 0 150px;"></div>
       <div class="col-md-6">
         <input type="checkbox" id="avisoPrivacidad" name="avisoPrivacidad" class="formCheck" v-model="student.advisory">
         <label class="checkLabel required" for="avisoPrivacidad"><span></span>
@@ -112,7 +114,10 @@
 
     </div>
     <div class="col-6">
-      <input type="submit" @click="save" value="REGISTRAR" class="formSubmit cw HVcc1xl bg1d HVbg1xd" id="submitForm" name="submitForm">
+      <input type="submit" @click="save" value="REGISTRAR" class="formSubmit cw HVcc1xl bg1d HVbg1xd" id="submitForm" name="submitForm" v-show="!registering">
+      <div class="spinner-border" role="status" style="margin: 0 auto; display: block; color: #EC8300;" v-show="registering">
+        <span class="sr-only">Loading...</span>
+      </div>
      </div>
   </div>
 </div>
