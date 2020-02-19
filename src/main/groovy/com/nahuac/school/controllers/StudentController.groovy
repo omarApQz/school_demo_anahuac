@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.servlet.view.RedirectView
 import com.nahuac.school.domain.Student
 import com.nahuac.school.repository.StudentRepository
 import com.nahuac.school.component.NotificationComponent
@@ -20,6 +21,12 @@ class StudentController {
 	StudentRepository studentRepository
 	@Autowired
 	NotificationComponent notificationComponent
+
+	@GetMapping("/")
+  @ResponseBody
+  RedirectView index() {
+		return new RedirectView("/student/show");
+  }
 
   @ResponseBody
 	@RequestMapping("/student")
