@@ -19,12 +19,12 @@ var app = new Vue({
       position: 'rightTop',
       helperNotificationCycle: true
     },
+    registering: false,
     secondName: "",
     secondLast: "",
     mathernName: ""
   },
   watch: {
-    
   },
   computed: {
 
@@ -35,9 +35,11 @@ var app = new Vue({
   methods:{
     save() {
       console.log("Save student")
+      this.registering = true
       this.$http.post('/student/save', this.student).then(response => {
         console.log(response)
-        this.$snotify.warning("Estudiante Registrado", this.notifyOptions);
+        this.$snotify.warning("Estudiante Registrado, Se envió un correo", this.notifyOptions);
+        this.registering = false
       }, response => {
         console.log(response)
       })
