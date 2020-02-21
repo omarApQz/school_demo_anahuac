@@ -55,4 +55,10 @@ class StudentController {
 		notificationComponent.sendNotification(params.email)
 		[response: "Save"]
   }
+
+	@GetMapping("/students")
+	@ResponseBody
+	List<Student> list(){
+		return studentRepository.findAll()
+	}
 }
